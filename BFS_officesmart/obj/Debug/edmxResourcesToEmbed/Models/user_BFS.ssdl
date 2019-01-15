@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_BFSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tAdmin">
+    <Key>
+      <PropertyRef Name="AdminID" />
+    </Key>
+    <Property Name="AdminID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Reserved" Type="uniqueidentifier" />
+    <Property Name="Name" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastUpdateTime" Type="datetime" Nullable="false" />
+    <Property Name="IDCode" Type="nchar" MaxLength="18" />
+    <Property Name="EUID" Type="uniqueidentifier" />
+    <Property Name="Wxid" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tRole">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="Power" Type="int" Nullable="false" />
+    <Property Name="LastUpdateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tRoleMenu">
+    <Key>
+      <PropertyRef Name="RoleMenuID" />
+    </Key>
+    <Property Name="RoleMenuID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleID" Type="uniqueidentifier" />
+    <Property Name="MenuID" Type="int" />
+  </EntityType>
+  <EntityType Name="tSmartRole">
+    <Key>
+      <PropertyRef Name="SmartRoleID" />
+    </Key>
+    <Property Name="SmartRoleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdminID" Type="uniqueidentifier" />
+    <Property Name="RoleID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="tSysMenu">
+    <Key>
+      <PropertyRef Name="MenuID" />
+    </Key>
+    <Property Name="MenuID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MenuName" Type="varchar" MaxLength="50" />
+    <Property Name="MenuURL" Type="varchar" MaxLength="50" />
+    <Property Name="MenuPartNo" Type="int" />
+    <Property Name="MenuIcon" Type="varchar" MaxLength="30" />
+    <Property Name="Menusort" Type="int" />
+  </EntityType>
+  <EntityContainer Name="db_BFSModelStoreContainer">
+    <EntitySet Name="tAdmin" EntityType="Self.tAdmin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tRole" EntityType="Self.tRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tRoleMenu" EntityType="Self.tRoleMenu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tSmartRole" EntityType="Self.tSmartRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tSysMenu" EntityType="Self.tSysMenu" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

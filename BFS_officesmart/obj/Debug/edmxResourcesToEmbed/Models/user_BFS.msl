@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="db_BFSModelStoreContainer" CdmEntityContainer="db_BFSEntities">
+    <EntitySetMapping Name="tAdmin">
+      <EntityTypeMapping TypeName="db_BFSModel.tAdmin">
+        <MappingFragment StoreEntitySet="tAdmin">
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="Reserved" ColumnName="Reserved" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="LastUpdateTime" ColumnName="LastUpdateTime" />
+          <ScalarProperty Name="IDCode" ColumnName="IDCode" />
+          <ScalarProperty Name="EUID" ColumnName="EUID" />
+          <ScalarProperty Name="Wxid" ColumnName="Wxid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tRole">
+      <EntityTypeMapping TypeName="db_BFSModel.tRole">
+        <MappingFragment StoreEntitySet="tRole">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Power" ColumnName="Power" />
+          <ScalarProperty Name="LastUpdateTime" ColumnName="LastUpdateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tRoleMenu">
+      <EntityTypeMapping TypeName="db_BFSModel.tRoleMenu">
+        <MappingFragment StoreEntitySet="tRoleMenu">
+          <ScalarProperty Name="RoleMenuID" ColumnName="RoleMenuID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tSmartRole">
+      <EntityTypeMapping TypeName="db_BFSModel.tSmartRole">
+        <MappingFragment StoreEntitySet="tSmartRole">
+          <ScalarProperty Name="SmartRoleID" ColumnName="SmartRoleID" />
+          <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tSysMenu">
+      <EntityTypeMapping TypeName="db_BFSModel.tSysMenu">
+        <MappingFragment StoreEntitySet="tSysMenu">
+          <ScalarProperty Name="Menusort" ColumnName="Menusort" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+          <ScalarProperty Name="MenuURL" ColumnName="MenuURL" />
+          <ScalarProperty Name="MenuPartNo" ColumnName="MenuPartNo" />
+          <ScalarProperty Name="MenuIcon" ColumnName="MenuIcon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

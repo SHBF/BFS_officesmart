@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_BFSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tAdmin">
+    <Key>
+      <PropertyRef Name="AdminID" />
+    </Key>
+    <Property Name="AdminID" Type="Guid" Nullable="false" />
+    <Property Name="RoleID" Type="Guid" Nullable="false" />
+    <Property Name="Reserved" Type="Guid" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="LastUpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IDCode" Type="String" MaxLength="18" FixedLength="true" Unicode="true" />
+    <Property Name="EUID" Type="Guid" />
+    <Property Name="Wxid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tRole">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Power" Type="Int32" Nullable="false" />
+    <Property Name="LastUpdateTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tRoleMenu">
+    <Key>
+      <PropertyRef Name="RoleMenuID" />
+    </Key>
+    <Property Name="RoleMenuID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleID" Type="Guid" />
+    <Property Name="MenuID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tSmartRole">
+    <Key>
+      <PropertyRef Name="SmartRoleID" />
+    </Key>
+    <Property Name="SmartRoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdminID" Type="Guid" />
+    <Property Name="RoleID" Type="Guid" />
+  </EntityType>
+  <EntityType Name="tSysMenu">
+    <Key>
+      <PropertyRef Name="MenuID" />
+    </Key>
+    <Property Name="MenuID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MenuName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MenuURL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MenuPartNo" Type="Int32" />
+    <Property Name="MenuIcon" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Menusort" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="db_BFSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tAdmin" EntityType="Self.tAdmin" />
+    <EntitySet Name="tRole" EntityType="Self.tRole" />
+    <EntitySet Name="tRoleMenu" EntityType="Self.tRoleMenu" />
+    <EntitySet Name="tSmartRole" EntityType="Self.tSmartRole" />
+    <EntitySet Name="tSysMenu" EntityType="Self.tSysMenu" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,23 @@
+ERROR 2019-01-15 10:48:35,236 [logerror] {
+  "MsgType": "DivideByZeroException",
+  "Message": "尝试除以零。",
+  "Path": "/Account/UserManagement",
+  "Assembly": "BFS_officesmart, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+  "ActionArguments": null,
+  "HttpMethod": "GET",
+  "StackTrace": "   在 BFS_officesmart.Controllers.TestController.Calc(Int32 a, Int32 b) 位置 F:\\报表网站\\BFS_officesmart\\BFS_officesmart\\Controllers\\AccountController.cs:行号 123\r\n   在 BFS_officesmart.Controllers.AccountController.UserManagement() 位置 F:\\报表网站\\BFS_officesmart\\BFS_officesmart\\Controllers\\AccountController.cs:行号 30\r\n   在 lambda_method(Closure , ControllerBase , Object[] )\r\n   在 System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)\r\n   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)\r\n   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)\r\n   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)\r\n   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)\r\n   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()\r\n   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)\r\n   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__11_0()\r\n   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()\r\n   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass7_0.<BeginInvokeActionMethodWithFilters>b__1(IAsyncResult asyncResult)\r\n   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)\r\n   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()\r\n   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)\r\n   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__3()\r\n   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__5(IAsyncResult asyncResult)",
+  "Source": "BFS_officesmart",
+  "IP": "192.168.11.2:60072",
+  "UserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0",
+  "DotNetVersion": "4.0.30319.42000",
+  "DotNetBit": "32位",
+  "OSVersion": "Microsoft Windows NT 10.0.17134.0",
+  "OSBit": "64位",
+  "CPUCount": "8",
+  "CPUType": "Intel64 Family 6 Model 142 Stepping 10, GenuineIntel",
+  "IISVersion": "Microsoft-IIS/10.0",
+  "Type": "页面",
+  "ShowException": true,
+  "Time": "2019-01-15 10:48:35",
+  "Method": "Calc"
+}
